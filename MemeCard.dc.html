@@ -27,7 +27,8 @@
     <div style="position:absolute;inset:0;border-radius:18px;background:#0a1f5c;transform:translateZ(-3px);"></div>
 
     <div style="position:absolute;inset:0;transform:translateZ(-4px) rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;">
-      <div style="position:relative;width:380px;height:531px;border-radius:18px;overflow:hidden;background:#0a1f5c url('./assets/card-back-doge.png') center/113% 113% no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35);">
+      <div style="position:relative;width:380px;height:531px;border-radius:18px;overflow:hidden;background:#0a1f5c;box-shadow:0 18px 40px rgba(0,0,0,.35);">
+        <img src="./assets/card-back-doge.png" alt="Dos de carte Doge bleu et or" draggable="false" style="display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;">
         <div style="position:absolute;inset:0;border-radius:18px;pointer-events:none;mix-blend-mode:overlay;background:radial-gradient(circle at calc(100% - var(--mx,30%)) var(--my,20%), rgba(255,255,255,calc(var(--glare,.35) * .55)) 0%, rgba(255,255,255,0) 55%);"></div>
         <div style="position:absolute;inset:0;border-radius:18px;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(calc(245deg - var(--mxn,0) * 55deg), rgba(255,240,190,0) 38%, rgba(255,240,190,calc(var(--glare,.35) * .35)) 48%, rgba(255,240,190,0) 58%);"></div>
       </div>
@@ -37,7 +38,12 @@
       <div style="width:380px;height:531px;box-sizing:border-box;padding:11px;border-radius:18px;background:{{ frameBg }};box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 18px 40px rgba(0,0,0,.35);font-family:'Barlow',sans-serif;color:{{ ink }};position:relative;isolation:isolate;overflow:hidden;">
         <sc-if value="{{ isFull }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:-1;background:#e9e3d6;">
-            <image-slot id="{{ imageId }}" shape="rect" placeholder="{{ placeholder }}"></image-slot>
+            <sc-if value="{{ imageSrc }}">
+              <img src="{{ imageSrc }}" alt="{{ name }}" draggable="false" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{{ imagePosition }};">
+            </sc-if>
+            <sc-if value="{{ noImage }}">
+              <image-slot id="{{ imageId }}" shape="rect" placeholder="{{ placeholder }}"></image-slot>
+            </sc-if>
           </div>
         </sc-if>
         <div style="height:100%;box-sizing:border-box;border-radius:8px;padding:8px 12px 7px;display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden;background:{{ faceBg }};box-shadow:{{ faceShadow }};">
@@ -65,7 +71,12 @@
           <sc-if value="{{ notFull }}" hint-placeholder-val="{{ true }}">
             <div style="margin-top:5px;padding:4px;border-radius:3px;background:{{ bezel }};box-shadow:0 2px 4px rgba(0,0,0,.25);">
               <div style="position:relative;height:178px;background:#e9e3d6;overflow:hidden;">
-                <image-slot id="{{ imageId }}" shape="rect" placeholder="{{ placeholder }}"></image-slot>
+                <sc-if value="{{ imageSrc }}">
+                  <img src="{{ imageSrc }}" alt="{{ name }}" draggable="false" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{{ imagePosition }};">
+                </sc-if>
+                <sc-if value="{{ noImage }}">
+                  <image-slot id="{{ imageId }}" shape="rect" placeholder="{{ placeholder }}"></image-slot>
+                </sc-if>
                 <sc-if value="{{ holoWin }}" hint-placeholder-val="{{ true }}">
                   <div style="position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(115deg, transparent 18%, rgba(255,80,200,.2) 34%, rgba(80,220,255,.22) 50%, rgba(255,235,90,.2) 66%, transparent 82%);background-size:250% 250%;background-position:var(--mx,30%) var(--my,20%);mix-blend-mode:screen;"></div>
                 </sc-if>
@@ -313,7 +324,8 @@ class Component extends DCLogic {
       ...look,
       rotor: this.rotor, onMove: this.onMove, onLeave: this.onLeave, onFlip: this.onFlip,
       name: c.name, hp: c.hp, stage: c.stage, category: c.category, origin: c.origin,
-      imageId: 'meme-' + c.id, placeholder: 'Déposez le meme',
+      imageId: 'meme-' + c.id, imageSrc: c.image || '', noImage: !c.image,
+      imagePosition: c.imagePosition || '50% 0%', placeholder: 'Déposez le meme',
       deep: t.deep, glyph: t.glyph,
       attacks: (c.attacks || []).map(a => ({ ...a, cost: a.cost.map(e) })),
       weak: e(c.weakness),

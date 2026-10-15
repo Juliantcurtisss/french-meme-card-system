@@ -1,0 +1,6 @@
+Tool: built-in image_gen (imagegen skill), edit mode.
+Source: assets/macron.JPG
+Output: assets/macron-enhanced.png
+
+Prompt:
+Use case: identity-preserve. Edit target: the supplied low-resolution Macron meme photograph. Restore and upscale this exact photograph to a clean high-resolution square image suitable for a printed trading card. Reduce JPEG blocking and jagged edges, gently improve sharpness, facial detail and natural color/contrast. Preserve the exact identity, shouting facial expression, age, pose, clothes, fluorescent yellow scarf, bag, people, stone wall, original light and original square composition. Keep the main woman's full face visible in the same upper-center location. Preserve the candid low-fi photographic character; do not beautify, stylize, replace the face, add details/objects/text, crop, or rearrange the scene. Output the enhanced photograph only, without a card frame.

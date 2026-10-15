@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atelier · Mèmes de France</title><link rel="stylesheet" href="/pipeline/style.css"><script src="/pipeline/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">MÈMES<span>DE FRANCE</span></a><span class="set-label">L’ATELIER · ÉDITION PERSONNELLE</span><a class="archive-link" href="#saved">Mes créations ↗</a></header>
+<main>
+  <section class="intro"><p class="eyebrow">DU MEME À LA CARTE</p><h1>Une image.<br>Une nouvelle légende.</h1><p>Votre photo, votre nom, vos attaques. Le reste prend forme ici.</p></section>
+  <div class="workspace">
+    <form id="creator">
+      <fieldset><legend><span>01</span> Le personnage</legend>
+        <label class="upload" id="dropzone"><input id="image" type="file" accept="image/jpeg,image/png,image/webp"><img id="upload-thumb" alt="Image choisie" hidden><span class="upload-icon" aria-hidden="true">↥</span><strong id="upload-label">Glissez votre meme ici</strong><small>ou cliquez pour choisir · JPG, PNG, WebP · 8 Mo max.</small></label>
+        <label class="field">Nom de la carte<input id="name" maxlength="32" placeholder="Ex. Macron !" required></label>
+      </fieldset>
+      <fieldset><legend><span>02</span> Les attaques</legend><p class="hint">Les noms sont à vous. Les effets et dégâts peuvent rester vides.</p><div id="attacks"></div><button class="text-button" id="add-attack" type="button">＋ Ajouter une attaque</button></fieldset>
+      <fieldset><legend><span>03</span> La rareté</legend><div id="rarities" class="rarities" role="group" aria-label="Rareté"></div><p class="hint" id="rarity-description"></p></fieldset>
+      <button class="save" id="save" type="submit" disabled>Enregistrer dans results <span>↗</span></button>
+      <p class="status" id="status" role="status" aria-live="polite">Commencez avec votre image, ou essayez l’exemple Macron.</p>
+      <button type="button" class="text-button example" id="example">Charger l’exemple Macron</button>
+    </form>
+    <aside class="preview-panel"><div class="preview-heading"><span class="eyebrow">VOTRE CARTE</span><span class="live"><i></i> Aperçu direct</span></div>
+      <div class="stage"><div class="empty-card" id="empty"><span>★</span><strong>La prochaine<br>légende, c’est vous.</strong><p>Ajoutez une image, un nom<br>et au moins une attaque.</p></div><iframe title="Aperçu de la carte" id="preview" sandbox="allow-scripts allow-same-origin" hidden></iframe></div>
+      <div class="preview-caption"><strong id="preview-name">En attente d’un meme</strong><span id="preview-tier">COMMON · ★</span></div><p class="hint preview-note">Survolez pour incliner · cliquez pour retourner</p>
+    </aside>
+  </div>
+  <section id="saved"><div class="saved-title"><h2>Les légendes déjà créées</h2><span>HTML + JSON</span></div><p class="hint">Chaque création est conservée dans votre dossier results. Ouvrez le HTML pour voir la carte ; réimportez le JSON pour la modifier.</p><label class="import-label">↥ Reprendre une carte JSON<input id="import" type="file" accept="application/json,.json"></label><ul id="results"></ul></section>
+</main><footer>MÈMES DE FRANCE <span>Des memes. Des cartes. Du grand n’importe quoi.</span></footer>
+</body></html>

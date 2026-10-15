@@ -19,7 +19,7 @@ a:hover{color:#ffe07a;}
   <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
     <header style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;">
       <div style="display:flex;flex-direction:column;gap:6px;">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Set de base · 6 / 120</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Set de base · 7 / 120</div>
         <h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:56px;line-height:.95;letter-spacing:-.01em;">Mèmes de France</h1>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;">
@@ -32,13 +32,13 @@ a:hover{color:#ffe07a;}
       </div>
     </header>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:36px 32px;">
-      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="7">
         <dc-import name="MemeCard" card="{{ c }}" holo="{{ holo }}" show-flavor="{{ showFlavor }}" frame="{{ frame }}" hint-size="380px,531px"></dc-import>
       </sc-for>
     </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
       <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Dos de carte</div>
-      <div style="width:380px;height:531px;border-radius:18px;overflow:hidden;background:#0a1f5c url('./assets/card-back-doge.png') center/113% 113% no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35);"></div>
+      <div style="width:380px;height:531px;border-radius:18px;overflow:hidden;background:#0a1f5c url('./assets/card-back-doge.png') center/contain no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35);"></div>
     </div>
   </div>
 </div>
@@ -55,6 +55,12 @@ const TYPES = [
   { label: 'Confusion', deep: '#c0397e', glyph: '@' },
 ];
 const CARDS = [
+  { id: 'macron', name: 'Macron !', hp: 70, type: 'raleur', tier: 'common', image: './assets/macron-enhanced.png', stage: 'De base', category: 'Meme Râleur', origin: 'Vidéo virale',
+    attacks: [
+      { name: 'Macron, explosion !', cost: ['raleur'], dmg: '20', text: 'Lancez une pièce. Si face, le Défenseur est Confus.' },
+      { name: 'Putainnn', cost: ['raleur', 'gaulois'], dmg: '40', text: 'Si ce meme a subi des dégâts au tour précédent, infligez 20 dégâts supplémentaires.' },
+    ], weakness: 'chic', resistance: null, retreat: 1,
+    flavor: 'Un gilet jaune, une voix, et tout le quartier est au courant.', number: '002/120', rarity: '★', illustrator: 'Internet' },
   { id: 'brogniart', name: 'Guignolo', hp: 90, type: 'acier', stage: 'De base', category: 'Meme Acier', origin: 'Vidéo virale',
     attacks: [
       { name: 'Sac à merde', cost: ['acier'], dmg: '30', text: 'Lancez une pièce. Si face, le Défenseur est vexé et ne peut pas attaquer au prochain tour.' },
