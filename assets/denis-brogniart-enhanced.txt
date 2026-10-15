@@ -1,0 +1,5 @@
+Mode: built-in image_gen, identity-preserve edit.
+Source: user attachment IMG_2941.WEBP (original not copied into workspace).
+
+Prompt:
+Use case: identity-preserve. Edit target: provided Denis Brogniart television screenshot. Restore and upscale this exact photograph, reducing compression and blur and improving natural facial, hair and blue shirt detail. Preserve his exact identity, wide eyes, open mouth, startled expression, pose, shirt, dark studio background, landscape framing and existing TV logos/text. Keep the face at the same position on the right, preserve full head and shoulders. Natural television still; do not beautify, restyle, add objects or change expression. Output enhanced photograph only, no card frame.

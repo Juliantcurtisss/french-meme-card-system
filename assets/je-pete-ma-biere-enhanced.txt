@@ -1,0 +1,6 @@
+Tool: built-in image_gen edit
+Source: user attachment IMG_2942 2.JPG
+Output: assets/je-pete-ma-biere-enhanced.png
+
+Prompt:
+Use case: identity-preserve photo restoration and precise text removal. Edit target: attached blurry vertical meme screenshot of a man in dark sunglasses and blue suit holding a tall blue beer can in one hand and pointing to it with the other. Improve resolution, reduce compression and blur, restore natural facial, sunglasses, suit and hand detail, balance exposure while keeping candid outdoor video-still character. Preserve identity, exact expression, pose, hand positions, beer can shape and blue design, clothes and urban background. Remove the entire bottom overlay caption '8 morts 6 blessés' including its black rectangle, seamlessly reconstructing the underlying suit/background. Crop away the empty black letterboxing above and below the actual photograph; output only the restored photograph in its natural portrait composition, full head, both hands and can visible. Do not add text, objects, card frames or stylization; no beautification. Keep any natural markings on the can, remove only the overlay caption.

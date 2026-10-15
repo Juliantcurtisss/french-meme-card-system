@@ -1,0 +1,7 @@
+Tool: built-in image_gen edit
+Source: user attachment IMG_2943.JPG
+Output: assets/chaises-de-caution-enhanced.png
+Note: AI restoration reconstructs detail from a very low resolution source.
+
+Prompt:
+Use case: identity-preserve restoration and precise text removal. Edit target: this extremely low resolution screenshot of a live party stage. Restore the actual landscape stage photograph only: crop away the large black letterboxing above and below and the blurred horizontal strip below the stage. Remove the full red/pink caption banner reading 'il y’a le chèque de caution' and its laughing emoji, reconstructing the underlying stage background seamlessly. Remove remaining overlaid text in the upper left. Improve clarity, resolution, color balance and compression without inventing a different event. Preserve original stage composition: standing performer at left-center with arm raised near head and microphone, dark foreground audience silhouette with both arms raised at center-right, chairs held overhead as visible in the reference, other partial figures at edges, bright multicolored circular stage lighting and backdrop. Preserve relative positions, actual poses, clothing and face identities as closely as source permits; keep naturally soft detail where source is unclear. No invented logos, no text, no new people or objects, no card frame. Landscape crop matching the actual stage content, photographic restored video still, not illustration.

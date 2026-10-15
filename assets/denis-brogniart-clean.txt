@@ -1,0 +1,6 @@
+Mode: built-in image_gen edit.
+Source: assets/denis-brogniart-enhanced.png
+Output: assets/denis-brogniart-clean.png
+
+Prompt:
+Edit only the two television logo areas of this enhanced photo. Remove the red dot and white 2 in the upper right, and remove the entire white Les Enfants de la Télé La Suite inscription in the lower left. Seamlessly fill these areas with the surrounding dark studio background and its natural texture. Preserve every other part of the photograph: Denis Brogniart's exact face, identity, wide eyes, open mouth, hair, pose, blue shirt, colors, lighting, landscape dimensions and composition. No cropping, no new text, no logos, no other changes.

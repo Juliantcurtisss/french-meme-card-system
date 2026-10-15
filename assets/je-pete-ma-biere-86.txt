@@ -1,0 +1,6 @@
+Tool: built-in image_gen edit
+Source: assets/je-pete-ma-biere-enhanced.png
+Output: assets/je-pete-ma-biere-86.png
+
+Prompt:
+Precise localized correction to this photograph: the beer brand was reconstructed incorrectly. Change ONLY the printed design on the blue can to an 8.6 beer can. Replace the large '1664' lettering with the exact large white text '8.6' (eight, dot, six), vertically styled to follow the tall blue can, and remove the 1664 heraldic crest and ribbons, using the blue/silver 8.6 beer packaging appearance. The large '8.6' must be clearly legible. Preserve the can's cylindrical shape, size, perspective, metal rim, blue color, lighting and all finger occlusions. Keep every pixel outside the can design as unchanged as possible: exact same man's face, sunglasses, hair, expression, pose, hands, suit, background, framing, dimensions and sharpness. No caption, no added overlay, no other changes.

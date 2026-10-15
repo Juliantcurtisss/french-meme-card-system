@@ -1,0 +1,6 @@
+Tool: built-in image_gen edit
+Source: user attachment IMG_2944.JPG
+Output: assets/ca-va-pt-enhanced.png
+
+Prompt:
+Use case: identity-preserve photo restoration and overlay removal. Edit this exact meme screenshot. Remove the central dark caption rectangle 'CA VA PT !', both magenta lower third banners and phone numbers, and all upper corner television text/logos, reconstructing the underlying pale blue shirt, red patterned tie, rail and background naturally. Crop away the flat brown letterbox bands above and below. Enhance clarity, reduce compression and blur, restore natural facial texture without beautification. Preserve this same bald man's exact identity, stern furrowed-brow expression, gaze, face proportions, pose, blue shirt and red tie, palm leaves, yellow wall, daylight and rail. Keep face centered horizontally and entire head visible with small breathing room, head-and-shoulders landscape framing suitable for a 1.8:1 trading-card art window; face is main focus. No added people or objects, no text or logos, no card border; natural restored video still.

@@ -19,7 +19,7 @@ a:hover{color:#ffe07a;}
   <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
     <header style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;">
       <div style="display:flex;flex-direction:column;gap:6px;">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Set de base · 7 / 120</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Set de base · 12 / 120</div>
         <h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:56px;line-height:.95;letter-spacing:-.01em;">Mèmes de France</h1>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;">
@@ -32,7 +32,7 @@ a:hover{color:#ffe07a;}
       </div>
     </header>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:36px 32px;">
-      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="7">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="12">
         <dc-import name="MemeCard" card="{{ c }}" holo="{{ holo }}" show-flavor="{{ showFlavor }}" frame="{{ frame }}" hint-size="380px,531px"></dc-import>
       </sc-for>
     </div>
@@ -55,18 +55,251 @@ const TYPES = [
   { label: 'Confusion', deep: '#c0397e', glyph: '@' },
 ];
 const CARDS = [
+  {
+  "id": "ca-va-pt",
+  "name": "Ca va PT",
+  "tier": "legendary",
+  "rarity": "★★★★",
+  "rarityLabel": "legendary",
+  "image": "./assets/ca-va-pt-enhanced.png",
+  "imagePosition": "50% 30%",
+  "hp": 130,
+  "type": "raleur",
+  "stage": "De base",
+  "category": "Meme Râleur",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "Vous allez fouiiii",
+      "text": "Le Défenseur est Confus. Son coût de retraite augmente de 1 énergie au prochain tour.",
+      "dmg": "60",
+      "cost": [
+        "raleur",
+        "gaulois"
+      ]
+    },
+    {
+      "name": "CA VA PETER ! PETER !",
+      "text": "Infligez aussi 20 dégâts à chaque meme du banc adverse. Défaussez 2 énergies attachées à ce meme.",
+      "dmg": "140",
+      "cost": [
+        "raleur",
+        "raleur",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "chic",
+  "resistance": null,
+  "retreat": 2,
+  "flavor": "Le calme avant la tempête dure exactement le temps de finir sa phrase.",
+  "number": "006/120",
+  "illustrator": "Image fournie"
+},
+  {
+  "id": "chaises-de-caution",
+  "name": "Chaises de caution",
+  "tier": "mistic",
+  "rarity": "★★★★★",
+  "rarityLabel": "mistic",
+  "image": "./assets/chaises-de-caution-clean.png",
+  "imagePosition": "50% 50%",
+  "hp": 150,
+  "type": "raleur",
+  "stage": "De base",
+  "category": "Meme Râleur",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "ATTENTION LES CHAISES",
+      "text": "Le Défenseur est Confus. Infligez aussi 20 dégâts à un meme du banc adverse.",
+      "dmg": "60",
+      "cost": [
+        "raleur",
+        "gaulois"
+      ]
+    },
+    {
+      "name": "LE CHEQUE DE CAUTION",
+      "text": "Défaussez 2 énergies attachées à ce meme. Le Défenseur ne peut pas attaquer au prochain tour.",
+      "dmg": "150",
+      "cost": [
+        "raleur",
+        "raleur",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "chic",
+  "resistance": "absurde",
+  "retreat": 2,
+  "flavor": "Les chaises s’envolent. La caution, elle, ne reviendra jamais.",
+  "number": "005/120",
+  "illustrator": "Image fournie"
+},
+  {
+  "id": "cheque-de-caution-fullart",
+  "name": "Cheque de caution",
+  "tier": "fullart",
+  "rarity": "★★★★★★",
+  "rarityLabel": "full art",
+  "image": "./assets/chaises-de-caution-clean.png",
+  "imagePosition": "40% 50%",
+  "hp": 150,
+  "type": "raleur",
+  "stage": "De base",
+  "category": "Meme Râleur",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "ATTENTION LES CHAISES",
+      "text": "Le Défenseur est Confus. Infligez aussi 20 dégâts à un meme du banc adverse.",
+      "dmg": "60",
+      "cost": [
+        "raleur",
+        "gaulois"
+      ]
+    },
+    {
+      "name": "LES CHAISES DE CAUTION",
+      "text": "Défaussez 2 énergies attachées à ce meme. Le Défenseur ne peut pas attaquer au prochain tour.",
+      "dmg": "150",
+      "cost": [
+        "raleur",
+        "raleur",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "chic",
+  "resistance": "absurde",
+  "retreat": 2,
+  "flavor": "Les chaises s’envolent. La caution, elle, ne reviendra jamais.",
+  "number": "005a/120",
+  "illustrator": "Image fournie"
+},
+  {
+  "id": "je-roucoule",
+  "name": "Je roucoule",
+  "tier": "rare",
+  "rarity": "★★",
+  "rarityLabel": "uncommon",
+  "image": "./assets/je-roucoule-enhanced.png",
+  "imagePosition": "50% 0%",
+  "hp": 90,
+  "type": "absurde",
+  "stage": "De base",
+  "category": "Meme Absurde",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "Je roucoule",
+      "text": "Lancez une pièce. Si face, le Défenseur est Confus. Si pile, soignez 20 PV à ce meme.",
+      "dmg": "30",
+      "cost": [
+        "absurde"
+      ]
+    },
+    {
+      "name": "Broyage de la langue de Molière",
+      "text": "Si le Défenseur est Confus, cette attaque inflige 20 dégâts supplémentaires.",
+      "dmg": "60",
+      "cost": [
+        "absurde",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "terroir",
+  "resistance": null,
+  "retreat": 1,
+  "flavor": "Sous les lampadaires, le pigeon de nuit trouve enfin sa voix.",
+  "number": "003/120",
+  "illustrator": "Image fournie"
+},
   { id: 'macron', name: 'Macron !', hp: 70, type: 'raleur', tier: 'common', image: './assets/macron-enhanced.png', stage: 'De base', category: 'Meme Râleur', origin: 'Vidéo virale',
     attacks: [
       { name: 'Macron, explosion !', cost: ['raleur'], dmg: '20', text: 'Lancez une pièce. Si face, le Défenseur est Confus.' },
       { name: 'Putainnn', cost: ['raleur', 'gaulois'], dmg: '40', text: 'Si ce meme a subi des dégâts au tour précédent, infligez 20 dégâts supplémentaires.' },
     ], weakness: 'chic', resistance: null, retreat: 1,
     flavor: 'Un gilet jaune, une voix, et tout le quartier est au courant.', number: '002/120', rarity: '★', illustrator: 'Internet' },
-  { id: 'brogniart', name: 'Guignolo', hp: 90, type: 'acier', stage: 'De base', category: 'Meme Acier', origin: 'Vidéo virale',
-    attacks: [
-      { name: 'Sac à merde', cost: ['acier'], dmg: '30', text: 'Lancez une pièce. Si face, le Défenseur est vexé et ne peut pas attaquer au prochain tour.' },
-      { name: 'T’as pas ton permis ?', cost: ['acier', 'acier', 'gaulois'], dmg: '80', text: 'Le Défenseur retourne sur le banc. Son coût de retraite est doublé.' },
-    ], weakness: 'absurde', resistance: 'raleur', retreat: 1,
-    flavor: 'Roule sans permis, mais jamais sans répartie.', number: '001/120', rarity: '★', illustrator: 'Internet' },
+  {
+  "id": "guignolo",
+  "name": "Guignolo",
+  "hp": 90,
+  "type": "acier",
+  "stage": "De base",
+  "category": "Meme Acier",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "Sac à merde",
+      "cost": [
+        "acier"
+      ],
+      "dmg": "30",
+      "text": "Lancez une pièce. Si face, le Défenseur est vexé et ne peut pas attaquer au prochain tour."
+    },
+    {
+      "name": "T’as pas ton permis ?",
+      "cost": [
+        "acier",
+        "acier",
+        "gaulois"
+      ],
+      "dmg": "80",
+      "text": "Le Défenseur retourne sur le banc. Son coût de retraite est doublé."
+    }
+  ],
+  "weakness": "absurde",
+  "resistance": "raleur",
+  "retreat": 1,
+  "flavor": "Roule sans permis, mais jamais sans répartie.",
+  "number": "001/120",
+  "rarity": "★",
+  "illustrator": "Internet",
+  "tier": "common"
+},
+  {
+  "id": "brogniart",
+  "name": "Denis Brogniart",
+  "tier": "common",
+  "rarity": "★",
+  "rarityLabel": "common",
+  "image": "./assets/denis-brogniart-clean.png",
+  "imagePosition": "78% 0%",
+  "hp": 90,
+  "type": "tele",
+  "stage": "De base",
+  "category": "Meme Télé",
+  "origin": "Télévision",
+  "attacks": [
+    {
+      "name": "Ah !",
+      "text": "Lancez une pièce. Si face, le Défenseur est Confus.",
+      "dmg": "30",
+      "cost": [
+        "tele"
+      ]
+    },
+    {
+      "name": "La sentence est irrévocable",
+      "text": "Défaussez une énergie attachée à ce meme. Le Défenseur ne peut pas battre en retraite au prochain tour.",
+      "dmg": "80",
+      "cost": [
+        "tele",
+        "tele",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "absurde",
+  "resistance": null,
+  "retreat": 1,
+  "flavor": "Un « Ah ! » suffit à faire trembler le conseil.",
+  "number": "004/120",
+  "illustrator": "Image fournie"
+},
   { id: 'moundir', name: 'Moundir', hp: 120, type: 'terroir', stage: 'De base', category: 'Meme Terroir', origin: 'Koh-Lanta, 2002',
     attacks: [
       { name: 'Keskia ?', cost: ['terroir'], dmg: '20', text: 'Le Défenseur est intimidé : il recule sur le banc.' },
@@ -81,12 +314,47 @@ const CARDS = [
       { name: 'Mon prénom est Mikaël', cost: ['gaulois', 'gaulois', 'gaulois'], dmg: '130', text: 'Le Défenseur doit l’appeler par son prénom. Il ne peut plus battre en retraite.' },
     ], weakness: 'absurde', resistance: null, retreat: 2,
     flavor: 'Édition Dictator : ici, c’est lui qui décide. Même de son prénom.', number: '027/120', rarity: '★★', illustrator: 'Internet' },
-  { id: 'coffe', name: '8 morts 6 blessés', edition: 'Dictator', hp: 130, type: 'confusion', stage: 'Niveau 1', category: 'Meme Confusion', origin: 'Vidéo virale',
-    attacks: [
-      { name: 'Ma libellule', cost: ['confusion'], dmg: '30', text: 'Le Défenseur est Confus.' },
-      { name: 'Je pète ma bière', cost: ['confusion', 'confusion', 'gaulois'], dmg: '100', text: 'Lancez une pièce. Si pile, cette attaque s’inflige 30 dégâts à elle-même.' },
-    ], weakness: 'chic', resistance: 'absurde', retreat: 2,
-    flavor: 'Édition Dictator : personne ne sait ce qu’il raconte, mais tout le monde l’écoute.', number: '042/120', rarity: '★★', illustrator: 'Internet' },
+  {
+  "id": "je-pete-ma-biere",
+  "name": "Je pète ma bière",
+  "tier": "legendary",
+  "rarity": "★★★★",
+  "rarityLabel": "legendary",
+  "image": "./assets/je-pete-ma-biere-86.png",
+  "imagePosition": "50% 25%",
+  "hp": 130,
+  "type": "confusion",
+  "stage": "De base",
+  "category": "Meme Confusion",
+  "origin": "Vidéo virale",
+  "attacks": [
+    {
+      "name": "8 morts 6 blessés",
+      "text": "Infligez aussi 10 dégâts à chaque meme du banc adverse. Cette attaque ignore les résistances.",
+      "dmg": "80",
+      "cost": [
+        "confusion",
+        "gaulois"
+      ]
+    },
+    {
+      "name": "ma lubullullllle",
+      "text": "Le Défenseur est Confus. Lancez une pièce. Si pile, ce meme s’inflige 30 dégâts.",
+      "dmg": "120",
+      "cost": [
+        "confusion",
+        "confusion",
+        "gaulois"
+      ]
+    }
+  ],
+  "weakness": "chic",
+  "resistance": "absurde",
+  "retreat": 2,
+  "flavor": "Une canette, des lunettes, et la langue française part en freestyle.",
+  "number": "042/120",
+  "illustrator": "Image fournie"
+},
   { id: 'oss117', name: 'Attention les jeunes', edition: 'Dictator', hp: 140, type: 'chic', stage: 'Niveau 1', category: 'Meme Chic', origin: 'Vidéo virale',
     attacks: [
       { name: 'Grenade, grenade !', cost: ['chic'], dmg: '30', text: 'Infligez 10 dégâts à chaque meme du banc adverse.' },

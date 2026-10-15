@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+Source: assets/je-roucoule-original.JPG
+Note: AI restoration; fine details are reconstructed.
+
+Prompt:
+Use case: identity-preserve. Edit target: attached low resolution meme photo. Restore and enhance this exact photograph for a collectible meme card. Reduce compression artifacts, noise and motion blur, improve natural detail and sharpness in face, glasses, beard and orange-red sweater, balance excessive yellow cast while retaining warm nighttime street lighting. Preserve the same man’s identity, expression, pose, hands, clothing, framing, railings, cars and street background exactly as closely as possible. Natural restored video still, not an illustration or glamour portrait. Square composition, high resolution. No added objects, no text, no watermark.

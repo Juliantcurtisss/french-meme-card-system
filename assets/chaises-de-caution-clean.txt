@@ -1,0 +1,6 @@
+Tool: built-in image_gen edit
+Source: assets/chaises-de-caution-enhanced.png
+Output: assets/chaises-de-caution-clean.png
+
+Prompt:
+Precisely edit this existing stage photograph: remove the vertical solid pink/purple band along the far left edge (roughly first 140 pixels of the 1675-pixel-wide image) by cropping off ONLY that narrow left band. Preserve the remaining photograph exactly: same performer, face, raised hand, chairs held overhead, foreground silhouette, stage lights, colors and detail. Keep the entire remaining width and height. No new content, no text, no reimagining. Output the cropped landscape photo with no pink vertical band.
