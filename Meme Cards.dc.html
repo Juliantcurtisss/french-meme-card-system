@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Rubik+Mono+One&display=swap">
+<style>
+body{margin:0;background:#1f1b17;}
+a{color:#f3c623;}
+a:hover{color:#ffe07a;}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#1f1b17;color:#f1e9da;font-family:'Barlow',sans-serif;padding:56px 32px 80px;box-sizing:border-box;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
+    <header style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Set de base · 6 / 120</div>
+        <h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:56px;line-height:.95;letter-spacing:-.01em;">Mèmes de France</h1>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;">
+        <sc-for list="{{ types }}" as="t" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;">
+            <div style="width:20px;height:20px;border-radius:50%;background:{{ t.deep }};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;box-shadow:0 0 0 1.5px #f1e9da;">{{ t.glyph }}</div>
+            <span>{{ t.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </header>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:36px 32px;">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
+        <dc-import name="MemeCard" card="{{ c }}" holo="{{ holo }}" show-flavor="{{ showFlavor }}" frame="{{ frame }}" hint-size="380px,531px"></dc-import>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#f3c623;">Dos de carte</div>
+      <div style="width:380px;height:531px;border-radius:18px;overflow:hidden;background:#0a1f5c url('./assets/card-back-doge.png') center/113% 113% no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35);"></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;holo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showFlavor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;frame&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;jaune&quot;,&quot;argent&quot;,&quot;noir&quot;],&quot;default&quot;:&quot;jaune&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const TYPES = [
+  { label: 'Râleur', deep: '#cf3f2a', glyph: '!' },
+  { label: 'Absurde', deep: '#8549bb', glyph: '?' },
+  { label: 'Terroir', deep: '#4c8636', glyph: '♣' },
+  { label: 'Télé', deep: '#d79b00', glyph: '◉' },
+  { label: 'Chic', deep: '#2c69b0', glyph: '✦' },
+  { label: 'Gaulois', deep: '#8f806a', glyph: '★' },
+  { label: 'Acier', deep: '#5f6f7d', glyph: '⬡' },
+  { label: 'Confusion', deep: '#c0397e', glyph: '@' },
+];
+const CARDS = [
+  { id: 'brogniart', name: 'Guignolo', hp: 90, type: 'acier', stage: 'De base', category: 'Meme Acier', origin: 'Vidéo virale',
+    attacks: [
+      { name: 'Sac à merde', cost: ['acier'], dmg: '30', text: 'Lancez une pièce. Si face, le Défenseur est vexé et ne peut pas attaquer au prochain tour.' },
+      { name: 'T’as pas ton permis ?', cost: ['acier', 'acier', 'gaulois'], dmg: '80', text: 'Le Défenseur retourne sur le banc. Son coût de retraite est doublé.' },
+    ], weakness: 'absurde', resistance: 'raleur', retreat: 1,
+    flavor: 'Roule sans permis, mais jamais sans répartie.', number: '001/120', rarity: '★', illustrator: 'Internet' },
+  { id: 'moundir', name: 'Moundir', hp: 120, type: 'terroir', stage: 'De base', category: 'Meme Terroir', origin: 'Koh-Lanta, 2002',
+    attacks: [
+      { name: 'Keskia ?', cost: ['terroir'], dmg: '20', text: 'Le Défenseur est intimidé : il recule sur le banc.' },
+      { name: 'Kestu m’casses ?', cost: ['terroir', 'gaulois'], dmg: '50', text: 'Si le Défenseur a attaqué ce tour-ci, +30 dégâts.' },
+      { name: 'Ferme ta race', cost: ['terroir', 'terroir', 'terroir'], dmg: '120', text: 'Le Défenseur ne peut plus attaquer au prochain tour.' },
+    ], weakness: 'chic', resistance: 'raleur', retreat: 2,
+    flavor: 'Le seul aventurier qui fait trembler l’île avant le conseil.', number: '014/120', rarity: '★', illustrator: 'Les Aventuriers' },
+  { id: 'justmike', name: 'Just Mike', edition: 'Dictator', hp: 150, type: 'gaulois', stage: 'De base', category: 'Meme Gaulois', origin: 'Vidéo virale',
+    attacks: [
+      { name: 'À déca pour Dona', cost: ['gaulois'], dmg: '20', text: 'Piochez 2 cartes. Le Défenseur s’endort au prochain tour.' },
+      { name: 'Just Mike !', cost: ['gaulois', 'gaulois'], dmg: '60', text: 'Lancez une pièce. Si face, +40 dégâts.' },
+      { name: 'Mon prénom est Mikaël', cost: ['gaulois', 'gaulois', 'gaulois'], dmg: '130', text: 'Le Défenseur doit l’appeler par son prénom. Il ne peut plus battre en retraite.' },
+    ], weakness: 'absurde', resistance: null, retreat: 2,
+    flavor: 'Édition Dictator : ici, c’est lui qui décide. Même de son prénom.', number: '027/120', rarity: '★★', illustrator: 'Internet' },
+  { id: 'coffe', name: '8 morts 6 blessés', edition: 'Dictator', hp: 130, type: 'confusion', stage: 'Niveau 1', category: 'Meme Confusion', origin: 'Vidéo virale',
+    attacks: [
+      { name: 'Ma libellule', cost: ['confusion'], dmg: '30', text: 'Le Défenseur est Confus.' },
+      { name: 'Je pète ma bière', cost: ['confusion', 'confusion', 'gaulois'], dmg: '100', text: 'Lancez une pièce. Si pile, cette attaque s’inflige 30 dégâts à elle-même.' },
+    ], weakness: 'chic', resistance: 'absurde', retreat: 2,
+    flavor: 'Édition Dictator : personne ne sait ce qu’il raconte, mais tout le monde l’écoute.', number: '042/120', rarity: '★★', illustrator: 'Internet' },
+  { id: 'oss117', name: 'Attention les jeunes', edition: 'Dictator', hp: 140, type: 'chic', stage: 'Niveau 1', category: 'Meme Chic', origin: 'Vidéo virale',
+    attacks: [
+      { name: 'Grenade, grenade !', cost: ['chic'], dmg: '30', text: 'Infligez 10 dégâts à chaque meme du banc adverse.' },
+      { name: 'Hop, grenade dans la gueule', cost: ['chic', 'gaulois'], dmg: '60', text: 'Le Défenseur est Confus.' },
+      { name: 'Et oui ! C’est la révolution', cost: ['chic', 'chic', 'chic'], dmg: '120', text: 'Défaussez toutes les énergies attachées à ce meme.' },
+    ], weakness: 'absurde', resistance: 'tele', retreat: 2,
+    flavor: 'Édition Dictator : il prévient les jeunes, puis il dégoupille.', number: '063/120', rarity: '★★', illustrator: 'Internet' },
+  { id: 'chirac', name: 'Le Président', hp: 130, type: 'terroir', stage: 'Niveau 2', category: 'Meme Terroir', origin: 'Salon de l’Agriculture',
+    attacks: [
+      { name: 'Abracadabrantesque', cost: ['terroir', 'gaulois'], dmg: '40', text: 'Le Défenseur est Confus. Il ne comprend pas non plus.' },
+      { name: 'Ça m’en touche une…', cost: ['terroir', 'terroir', 'terroir'], dmg: '100', text: 'Cette attaque ignore faiblesses, résistances et tous les effets en jeu.' },
+    ], weakness: 'raleur', resistance: 'chic', retreat: 3,
+    flavor: '…sans faire bouger l’autre. A caressé plus de vaches que de dossiers.', number: '088/120', rarity: '★', illustrator: 'Corrèze' },
+];
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      types: TYPES, cards: CARDS,
+      holo: this.props.holo ?? true,
+      showFlavor: this.props.showFlavor ?? true,
+      frame: this.props.frame ?? 'jaune',
+    };
+  }
+}
+</script>
+</body>
+</html>
